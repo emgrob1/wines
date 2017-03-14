@@ -7,7 +7,6 @@ class Grapes extends Controller{
 	}
 	
 	function index() {
-
 		$this->view->render('grapes/index');
 	}
 	
@@ -15,7 +14,6 @@ class Grapes extends Controller{
 	function insertGrapes(){
 		$this->model->grapesInsert();
 	}
-	
 	
 	function getGrapes(){
 		$this->model->getGrapes();

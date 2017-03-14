@@ -23,7 +23,8 @@ class Login_Model extends Model
 			// login
 			Session::init();
 			Session::set('loggedIn', true);
-			header('location: ../dashboard');
+			Session::set('username', $_POST['login']);
+			header('location: ../admin');
 		} else {
 			header('location: ../login');
 		}

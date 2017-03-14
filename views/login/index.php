@@ -1,5 +1,5 @@
 
-<?php include 'header.php';?>
+
 
 
 <div id="information" class="spacer reserve-info ">
@@ -18,5 +18,3 @@
 </div>
 </div>
 </div>
-
-<?php include 'footer.php';?>
