@@ -6,9 +6,19 @@ class Grapes extends Controller{
 		$this->view->js = array('grapes/js/default.js');
 	}
 	
-	function index() {
-		$this->view->render('grapes/index');
+	
+	function indexAction(){
+  	$list = $this->model->getGrapes();
+	    $data['list'] = $list;
+	    $this->load->view('grapes/index', $data);
 	}
+	
+	function index() {
+		$list = $this->model->getGrapes(); 
+	$this->view->list = $list;
+
+ $this->view->render('grapes/index');
+  }
 	
 	
 	function insertGrapes(){
@@ -16,9 +26,15 @@ class Grapes extends Controller{
 	}
 	
 	function getGrapes(){
-		$this->model->getGrapes();
+		
+	 return $this->model->getGrapes();
+
 	}
 	
+	function showList(){
+	
+		
+	}
 }
 
 ?>
